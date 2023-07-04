@@ -1,0 +1,68 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "This is a solution to the Tip calculator app challenge on Frontend Mentor",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx  --max-warnings=0 --fix",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anatolykulikov/Tip-calculator-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anatolykulikov/Tip-calculator-app/issues"
+  },
+  "homepage": "https://github.com/anatolykulikov/Tip-calculator-app#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html-webpack-plugin": "^5.5.3",
+    "husky": "^8.0.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.5",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --debug --max-warnings=0"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
